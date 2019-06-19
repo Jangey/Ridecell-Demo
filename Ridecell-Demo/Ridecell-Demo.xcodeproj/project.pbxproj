@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4EE1F00422B9F39600226F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1F00322B9F39600226F74 /* AppDelegate.swift */; };
+		4EE1F00622B9F39600226F74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1F00522B9F39600226F74 /* ViewController.swift */; };
+		4EE1F00922B9F39600226F74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE1F00722B9F39600226F74 /* Main.storyboard */; };
+		4EE1F00B22B9F39700226F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EE1F00A22B9F39700226F74 /* Assets.xcassets */; };
+		4EE1F00E22B9F39700226F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE1F00C22B9F39700226F74 /* LaunchScreen.storyboard */; };
+		4EE1F01922B9F39700226F74 /* Ridecell_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1F01822B9F39700226F74 /* Ridecell_DemoTests.swift */; };
+		4EE1F02422B9F39700226F74 /* Ridecell_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1F02322B9F39700226F74 /* Ridecell_DemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EE1F01522B9F39700226F74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EE1EFF822B9F39600226F74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EE1EFFF22B9F39600226F74;
+			remoteInfo = "Ridecell-Demo";
+		};
+		4EE1F02022B9F39700226F74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EE1EFF822B9F39600226F74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EE1EFFF22B9F39600226F74;
+			remoteInfo = "Ridecell-Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4EE1F00022B9F39600226F74 /* Ridecell-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ridecell-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EE1F00322B9F39600226F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4EE1F00522B9F39600226F74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EE1F00822B9F39600226F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4EE1F00A22B9F39700226F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4EE1F00D22B9F39700226F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4EE1F00F22B9F39700226F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EE1F01422B9F39700226F74 /* Ridecell-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ridecell-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EE1F01822B9F39700226F74 /* Ridecell_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ridecell_DemoTests.swift; sourceTree = "<group>"; };
+		4EE1F01A22B9F39700226F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EE1F01F22B9F39700226F74 /* Ridecell-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ridecell-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EE1F02322B9F39700226F74 /* Ridecell_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ridecell_DemoUITests.swift; sourceTree = "<group>"; };
+		4EE1F02522B9F39700226F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EE1EFFD22B9F39600226F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EE1F01122B9F39700226F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EE1F01C22B9F39700226F74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EE1EFF722B9F39600226F74 = {
+			isa = PBXGroup;
+			children = (
+				4EE1F00222B9F39600226F74 /* Ridecell-Demo */,
+				4EE1F01722B9F39700226F74 /* Ridecell-DemoTests */,
+				4EE1F02222B9F39700226F74 /* Ridecell-DemoUITests */,
+				4EE1F00122B9F39600226F74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4EE1F00122B9F39600226F74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EE1F00022B9F39600226F74 /* Ridecell-Demo.app */,
+				4EE1F01422B9F39700226F74 /* Ridecell-DemoTests.xctest */,
+				4EE1F01F22B9F39700226F74 /* Ridecell-DemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EE1F00222B9F39600226F74 /* Ridecell-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				4EE1F00322B9F39600226F74 /* AppDelegate.swift */,
+				4EE1F00522B9F39600226F74 /* ViewController.swift */,
+				4EE1F00722B9F39600226F74 /* Main.storyboard */,
+				4EE1F00A22B9F39700226F74 /* Assets.xcassets */,
+				4EE1F00C22B9F39700226F74 /* LaunchScreen.storyboard */,
+				4EE1F00F22B9F39700226F74 /* Info.plist */,
+			);
+			path = "Ridecell-Demo";
+			sourceTree = "<group>";
+		};
+		4EE1F01722B9F39700226F74 /* Ridecell-DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EE1F01822B9F39700226F74 /* Ridecell_DemoTests.swift */,
+				4EE1F01A22B9F39700226F74 /* Info.plist */,
+			);
+			path = "Ridecell-DemoTests";
+			sourceTree = "<group>";
+		};
+		4EE1F02222B9F39700226F74 /* Ridecell-DemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4EE1F02322B9F39700226F74 /* Ridecell_DemoUITests.swift */,
+				4EE1F02522B9F39700226F74 /* Info.plist */,
+			);
+			path = "Ridecell-DemoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EE1EFFF22B9F39600226F74 /* Ridecell-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EE1F02822B9F39700226F74 /* Build configuration list for PBXNativeTarget "Ridecell-Demo" */;
+			buildPhases = (
+				4EE1EFFC22B9F39600226F74 /* Sources */,
+				4EE1EFFD22B9F39600226F74 /* Frameworks */,
+				4EE1EFFE22B9F39600226F74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ridecell-Demo";
+			productName = "Ridecell-Demo";
+			productReference = 4EE1F00022B9F39600226F74 /* Ridecell-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4EE1F01322B9F39700226F74 /* Ridecell-DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EE1F02B22B9F39700226F74 /* Build configuration list for PBXNativeTarget "Ridecell-DemoTests" */;
+			buildPhases = (
+				4EE1F01022B9F39700226F74 /* Sources */,
+				4EE1F01122B9F39700226F74 /* Frameworks */,
+				4EE1F01222B9F39700226F74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EE1F01622B9F39700226F74 /* PBXTargetDependency */,
+			);
+			name = "Ridecell-DemoTests";
+			productName = "Ridecell-DemoTests";
+			productReference = 4EE1F01422B9F39700226F74 /* Ridecell-DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4EE1F01E22B9F39700226F74 /* Ridecell-DemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EE1F02E22B9F39700226F74 /* Build configuration list for PBXNativeTarget "Ridecell-DemoUITests" */;
+			buildPhases = (
+				4EE1F01B22B9F39700226F74 /* Sources */,
+				4EE1F01C22B9F39700226F74 /* Frameworks */,
+				4EE1F01D22B9F39700226F74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EE1F02122B9F39700226F74 /* PBXTargetDependency */,
+			);
+			name = "Ridecell-DemoUITests";
+			productName = "Ridecell-DemoUITests";
+			productReference = 4EE1F01F22B9F39700226F74 /* Ridecell-DemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EE1EFF822B9F39600226F74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Jangey Lu";
+				TargetAttributes = {
+					4EE1EFFF22B9F39600226F74 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					4EE1F01322B9F39700226F74 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4EE1EFFF22B9F39600226F74;
+					};
+					4EE1F01E22B9F39700226F74 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4EE1EFFF22B9F39600226F74;
+					};
+				};
+			};
+			buildConfigurationList = 4EE1EFFB22B9F39600226F74 /* Build configuration list for PBXProject "Ridecell-Demo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4EE1EFF722B9F39600226F74;
+			productRefGroup = 4EE1F00122B9F39600226F74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EE1EFFF22B9F39600226F74 /* Ridecell-Demo */,
+				4EE1F01322B9F39700226F74 /* Ridecell-DemoTests */,
+				4EE1F01E22B9F39700226F74 /* Ridecell-DemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EE1EFFE22B9F39600226F74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EE1F00E22B9F39700226F74 /* LaunchScreen.storyboard in Resources */,
+				4EE1F00B22B9F39700226F74 /* Assets.xcassets in Resources */,
+				4EE1F00922B9F39600226F74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EE1F01222B9F39700226F74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EE1F01D22B9F39700226F74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EE1EFFC22B9F39600226F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EE1F00622B9F39600226F74 /* ViewController.swift in Sources */,
+				4EE1F00422B9F39600226F74 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EE1F01022B9F39700226F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EE1F01922B9F39700226F74 /* Ridecell_DemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EE1F01B22B9F39700226F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EE1F02422B9F39700226F74 /* Ridecell_DemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EE1F01622B9F39700226F74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EE1EFFF22B9F39600226F74 /* Ridecell-Demo */;
+			targetProxy = 4EE1F01522B9F39700226F74 /* PBXContainerItemProxy */;
+		};
+		4EE1F02122B9F39700226F74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EE1EFFF22B9F39600226F74 /* Ridecell-Demo */;
+			targetProxy = 4EE1F02022B9F39700226F74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4EE1F00722B9F39600226F74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EE1F00822B9F39600226F74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4EE1F00C22B9F39700226F74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EE1F00D22B9F39700226F74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4EE1F02622B9F39700226F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4EE1F02722B9F39700226F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EE1F02922B9F39700226F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ridecell-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jangey.Ridecell-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4EE1F02A22B9F39700226F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ridecell-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jangey.Ridecell-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4EE1F02C22B9F39700226F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ridecell-DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jangey.Ridecell-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ridecell-Demo.app/Ridecell-Demo";
+			};
+			name = Debug;
+		};
+		4EE1F02D22B9F39700226F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ridecell-DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jangey.Ridecell-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ridecell-Demo.app/Ridecell-Demo";
+			};
+			name = Release;
+		};
+		4EE1F02F22B9F39700226F74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ridecell-DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jangey.Ridecell-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ridecell-Demo";
+			};
+			name = Debug;
+		};
+		4EE1F03022B9F39700226F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Ridecell-DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jangey.Ridecell-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ridecell-Demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EE1EFFB22B9F39600226F74 /* Build configuration list for PBXProject "Ridecell-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EE1F02622B9F39700226F74 /* Debug */,
+				4EE1F02722B9F39700226F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EE1F02822B9F39700226F74 /* Build configuration list for PBXNativeTarget "Ridecell-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EE1F02922B9F39700226F74 /* Debug */,
+				4EE1F02A22B9F39700226F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EE1F02B22B9F39700226F74 /* Build configuration list for PBXNativeTarget "Ridecell-DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EE1F02C22B9F39700226F74 /* Debug */,
+				4EE1F02D22B9F39700226F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EE1F02E22B9F39700226F74 /* Build configuration list for PBXNativeTarget "Ridecell-DemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EE1F02F22B9F39700226F74 /* Debug */,
+				4EE1F03022B9F39700226F74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EE1EFF822B9F39600226F74 /* Project object */;
+}
