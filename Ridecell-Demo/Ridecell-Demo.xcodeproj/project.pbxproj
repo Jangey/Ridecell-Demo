@@ -14,6 +14,7 @@
 		4EE1F00E22B9F39700226F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE1F00C22B9F39700226F74 /* LaunchScreen.storyboard */; };
 		4EE1F01922B9F39700226F74 /* Ridecell_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1F01822B9F39700226F74 /* Ridecell_DemoTests.swift */; };
 		4EE1F02422B9F39700226F74 /* Ridecell_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1F02322B9F39700226F74 /* Ridecell_DemoUITests.swift */; };
+		4EE1F03322B9F67000226F74 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE1F03222B9F67000226F74 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4EE1F01F22B9F39700226F74 /* Ridecell-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ridecell-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE1F02322B9F39700226F74 /* Ridecell_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ridecell_DemoUITests.swift; sourceTree = "<group>"; };
 		4EE1F02522B9F39700226F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EE1F03222B9F67000226F74 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE1F03322B9F67000226F74 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				4EE1F01722B9F39700226F74 /* Ridecell-DemoTests */,
 				4EE1F02222B9F39700226F74 /* Ridecell-DemoUITests */,
 				4EE1F00122B9F39600226F74 /* Products */,
+				4EE1F03122B9F67000226F74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				4EE1F02522B9F39700226F74 /* Info.plist */,
 			);
 			path = "Ridecell-DemoUITests";
+			sourceTree = "<group>";
+		};
+		4EE1F03122B9F67000226F74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EE1F03222B9F67000226F74 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
