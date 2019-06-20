@@ -15,6 +15,7 @@
 		4EE1F01922B9F39700226F74 /* Ridecell_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1F01822B9F39700226F74 /* Ridecell_DemoTests.swift */; };
 		4EE1F02422B9F39700226F74 /* Ridecell_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE1F02322B9F39700226F74 /* Ridecell_DemoUITests.swift */; };
 		4EE1F03322B9F67000226F74 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE1F03222B9F67000226F74 /* MapKit.framework */; };
+		4EFE19AA22BB796E00D17549 /* vehicles_data_(1).json in Resources */ = {isa = PBXBuildFile; fileRef = 4EFE19A922BB796E00D17549 /* vehicles_data_(1).json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4EE1F02322B9F39700226F74 /* Ridecell_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ridecell_DemoUITests.swift; sourceTree = "<group>"; };
 		4EE1F02522B9F39700226F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EE1F03222B9F67000226F74 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4EFE19A922BB796E00D17549 /* vehicles_data_(1).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "vehicles_data_(1).json"; path = "../../vehicles_data_(1).json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		4EE1F00222B9F39600226F74 /* Ridecell-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4EFE19A922BB796E00D17549 /* vehicles_data_(1).json */,
 				4EE1F00322B9F39600226F74 /* AppDelegate.swift */,
 				4EE1F00522B9F39600226F74 /* ViewController.swift */,
 				4EE1F00722B9F39600226F74 /* Main.storyboard */,
@@ -244,6 +247,7 @@
 				4EE1F00E22B9F39700226F74 /* LaunchScreen.storyboard in Resources */,
 				4EE1F00B22B9F39700226F74 /* Assets.xcassets in Resources */,
 				4EE1F00922B9F39600226F74 /* Main.storyboard in Resources */,
+				4EFE19AA22BB796E00D17549 /* vehicles_data_(1).json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

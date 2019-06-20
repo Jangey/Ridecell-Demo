@@ -22,6 +22,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         // show user current location
         self.mapView.showsUserLocation = true
         getSF_Location()
+        
+        getJson()
     }
     
     func getSF_Location()  {
@@ -32,6 +34,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.setRegion(region, animated: true)
     }
 
+    func getJson() {
+        let url = Bundle.main.url(forResource: "vehicles_data_(1)", withExtension: "json")
+        
+        guard let jsonData = url else{return}
+        guard let data = try? Data(contentsOf: jsonData) else { return }
+        guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else{return}
+    
+        print(json)
+    }
 
 }
 
