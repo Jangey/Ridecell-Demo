@@ -13,6 +13,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
+    var cars:[Car] = []
 
     
     override func viewDidLoad() {
@@ -37,11 +38,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     func getJson() {
         let url = Bundle.main.url(forResource: "vehicles_data_(1)", withExtension: "json")
         
-        guard let jsonData = url else{return}
-        guard let data = try? Data(contentsOf: jsonData) else { return }
-        guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else{return}
-    
-        print(json)
+        let jsonData = url!
+        let data = try! Data(contentsOf: jsonData)
+        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
+        print(json[0]["is_active"] as! Bool)
     }
 
 }
