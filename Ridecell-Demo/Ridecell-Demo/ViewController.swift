@@ -12,8 +12,10 @@ import MapKit
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    
     let locationManager = CLLocationManager()
     var cars:[Car] = []
+    var annotations = [MKPointAnnotation()]
 
     
     override func viewDidLoad() {
@@ -22,9 +24,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         // show user current location
         self.mapView.showsUserLocation = true
+        getCurrentLocation()
         getSF_Location()
-        
         getJson()
+    }
+    
+    func getCurrentLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     func getSF_Location()  {
@@ -40,8 +49,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         let jsonData = url!
         let data = try! Data(contentsOf: jsonData)
-        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
-        print(json[0]["is_active"] as! Bool)
+        let jsonDecode = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
+        // print(json[0]["is_active"] as! Bool)
+        
+        let cars = Car.cars(json: jsonDecode)
+        print(cars[0].id)
     }
 
 }

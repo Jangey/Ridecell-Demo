@@ -51,7 +51,7 @@
 		4EE1F02322B9F39700226F74 /* Ridecell_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ridecell_DemoUITests.swift; sourceTree = "<group>"; };
 		4EE1F02522B9F39700226F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EE1F03222B9F67000226F74 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		4EFE19A922BB796E00D17549 /* vehicles_data_(1).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "vehicles_data_(1).json"; path = "../../vehicles_data_(1).json"; sourceTree = "<group>"; };
+		4EFE19A922BB796E00D17549 /* vehicles_data_(1).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "vehicles_data_(1).json"; sourceTree = "<group>"; };
 		4EFE19AB22BC852700D17549 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,11 +105,10 @@
 		4EE1F00222B9F39600226F74 /* Ridecell-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				4EFE19A922BB796E00D17549 /* vehicles_data_(1).json */,
+				4EFE19AD22BC920A00D17549 /* JSON-API */,
 				4EE1F00322B9F39600226F74 /* AppDelegate.swift */,
 				4EE1F00522B9F39600226F74 /* ViewController.swift */,
 				4EE1F00722B9F39600226F74 /* Main.storyboard */,
-				4EFE19AB22BC852700D17549 /* Car.swift */,
 				4EE1F00A22B9F39700226F74 /* Assets.xcassets */,
 				4EE1F00C22B9F39700226F74 /* LaunchScreen.storyboard */,
 				4EE1F00F22B9F39700226F74 /* Info.plist */,
@@ -141,6 +140,15 @@
 				4EE1F03222B9F67000226F74 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EFE19AD22BC920A00D17549 /* JSON-API */ = {
+			isa = PBXGroup;
+			children = (
+				4EFE19A922BB796E00D17549 /* vehicles_data_(1).json */,
+				4EFE19AB22BC852700D17549 /* Car.swift */,
+			);
+			path = "JSON-API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

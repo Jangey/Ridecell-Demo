@@ -42,4 +42,14 @@ class Car {
         vehicle_type = json["vehicle_type"] as? String ?? "No vehicle type"
         vehicle_type_id = json["vehicle_type_id"] as? Int ?? 0
     }
+    
+    class func cars(json: [[String: Any]]) -> [Car] {
+        var cars: [Car] = []
+        for eachCar in json {
+            let car = Car(json: eachCar)
+            cars.append(car)
+        }
+        
+        return cars
+    }
 }
