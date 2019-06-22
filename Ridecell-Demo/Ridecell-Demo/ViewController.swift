@@ -32,6 +32,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         getCurrentLocation()
         getSF_Location()
         addSpotOnMap()
+        
+        
     }
     
     func getCurrentLocation() {
@@ -59,6 +61,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         cars = Car.cars(json: jsonDecode)
     }
+    
+    
     
     
     // https://api.opencagedata.com/geocode/v1/json?q=47.61328+-122.342385&key=1598abf0be694459b9e15c4f7ca662bd
@@ -110,6 +114,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
 
+    @IBAction func tapMap(_ sender: Any) {
+        annotationDetailsBottomEdge.constant = -250
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
     
     
     
