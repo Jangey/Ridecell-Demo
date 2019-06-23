@@ -173,6 +173,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         let newLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake((locationManager.location?.coordinate.latitude)!, (locationManager.location?.coordinate.longitude)!)
         let region:MKCoordinateRegion = MKCoordinateRegion(center: newLocation, span: span)
         mapView.setRegion(region, animated: true)
+        
+        // Hide details page
+        annotationDetailsBottomEdge.constant = -250
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
     
     
