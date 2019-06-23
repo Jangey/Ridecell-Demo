@@ -105,7 +105,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 annotationRegion.coordinate = spotCoordinate
             }
         }
-        mapView.addAnnotations(annotations.reversed())
+        mapView.addAnnotations(annotations)
     }
     
 
@@ -147,6 +147,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         })
     }
     
+    @IBAction func hideBottom(_ sender: Any) {
+        annotationDetailsBottomEdge.constant = -250
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    
     @IBAction func reservePress(_ sender: Any) {
         let alert = UIAlertController(title: "Reserve Fail", message: "Sorry, It's demo app.\n Cannot be reserve!", preferredStyle: UIAlertController.Style.alert)
         
@@ -155,6 +163,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func meButtomPress(_ sender: Any) {
+        // Zoom to San Francisco by default
+        let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let newLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake((locationManager.location?.coordinate.latitude)!, (locationManager.location?.coordinate.longitude)!)
+        let region:MKCoordinateRegion = MKCoordinateRegion(center: newLocation, span: span)
+        mapView.setRegion(region, animated: true)
     }
     
     
