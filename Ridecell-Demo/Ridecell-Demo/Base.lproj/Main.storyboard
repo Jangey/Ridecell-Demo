@@ -27,9 +27,49 @@
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOO-LC-cwY">
                                 <rect key="frame" x="0.0" y="646" width="414" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8E-CK-aMh">
+                                        <rect key="frame" x="40" y="190" width="334" height="30"/>
+                                        <color key="backgroundColor" red="0.1147332143" green="0.62496875350000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Reserve This Car">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reservePress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ElL-3X-Dui"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle: Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJZ-h7-pcv">
+                                        <rect key="frame" x="20" y="30" width="110" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License Plate: 8ABC123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8t-Fm-I2S">
+                                        <rect key="frame" x="20" y="81" width="183" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Range: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg2-aF-WEB">
+                                        <rect key="frame" x="20" y="132" width="153" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="r8E-CK-aMh" firstAttribute="centerX" secondItem="tOO-LC-cwY" secondAttribute="centerX" id="2Ml-XH-Hf5"/>
                                     <constraint firstAttribute="height" constant="250" id="4H8-l8-n8p"/>
+                                    <constraint firstItem="x8t-Fm-I2S" firstAttribute="top" secondItem="iJZ-h7-pcv" secondAttribute="bottom" constant="30" id="4ei-a5-21V"/>
+                                    <constraint firstAttribute="bottom" secondItem="r8E-CK-aMh" secondAttribute="bottom" constant="30" id="F0Y-bi-xva"/>
+                                    <constraint firstItem="Eg2-aF-WEB" firstAttribute="top" secondItem="x8t-Fm-I2S" secondAttribute="bottom" constant="30" id="GGo-hl-MlI"/>
+                                    <constraint firstItem="x8t-Fm-I2S" firstAttribute="leading" secondItem="tOO-LC-cwY" secondAttribute="leading" constant="20" id="JcT-C3-fz8"/>
+                                    <constraint firstItem="Eg2-aF-WEB" firstAttribute="leading" secondItem="tOO-LC-cwY" secondAttribute="leading" constant="20" id="NSu-cn-vSq"/>
+                                    <constraint firstItem="r8E-CK-aMh" firstAttribute="leading" secondItem="tOO-LC-cwY" secondAttribute="leading" constant="40" id="Q5O-Gk-OCR"/>
+                                    <constraint firstAttribute="trailing" secondItem="r8E-CK-aMh" secondAttribute="trailing" constant="40" id="fh9-oN-QX4"/>
+                                    <constraint firstItem="iJZ-h7-pcv" firstAttribute="leading" secondItem="tOO-LC-cwY" secondAttribute="leading" constant="20" id="icV-mg-Ue0"/>
+                                    <constraint firstItem="iJZ-h7-pcv" firstAttribute="top" secondItem="tOO-LC-cwY" secondAttribute="top" constant="30" id="tdf-bT-ffP"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -49,6 +89,9 @@
                     <connections>
                         <outlet property="annotationDetailsBottomEdge" destination="NvK-bH-lHD" id="ECR-tb-Ozh"/>
                         <outlet property="mapView" destination="0MA-Bt-FEF" id="ZRm-xW-Zv5"/>
+                        <outlet property="vehicleLicensePlate" destination="x8t-Fm-I2S" id="yGB-QV-Kxq"/>
+                        <outlet property="vehicleName" destination="iJZ-h7-pcv" id="DIJ-AU-srp"/>
+                        <outlet property="vehicleReminingRange" destination="Eg2-aF-WEB" id="bGO-VZ-nkV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

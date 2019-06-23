@@ -15,10 +15,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var annotationDetails: UIView!
     @IBOutlet weak var annotationDetailsBottomEdge: NSLayoutConstraint!
     
+    class CustomPointAnnotation: MKPointAnnotation {
+        var tag: Int!
+    }
     
     let locationManager = CLLocationManager()
     var cars:[Car] = []
-    var annotations = [MKPointAnnotation()]
+    var annotations = [CustomPointAnnotation()]
+    
+    @IBOutlet weak var vehicleName: UILabel!
+    @IBOutlet weak var vehicleReminingRange: UILabel!
+    @IBOutlet weak var vehicleLicensePlate: UILabel!
+    
 
     
     override func viewDidLoad() {
@@ -67,10 +75,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     // https://api.opencagedata.com/geocode/v1/json?q=47.61328+-122.342385&key=1598abf0be694459b9e15c4f7ca662bd
     func addSpotOnMap() {
-        let annotationRegion = MKPointAnnotation()
+        let annotationRegion = CustomPointAnnotation()
         
         // adding each spot into mapView
-        for car in cars {
+        for (index, car) in cars.enumerated() {
             let lat = car.lat
             let lng = car.lng
             let address = "Address not available"
@@ -84,23 +92,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 let spotCoordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
                 
                 // adding each spot into MAP
-                let annotation = MKPointAnnotation()
+                let annotation = CustomPointAnnotation()
                 annotation.coordinate = spotCoordinate
                 annotation.title = carPlate
                 annotation.subtitle = address
+                annotation.tag = index
                 annotations.append(annotation)
                 
                 // update last annotation coordinate
                 annotationRegion.coordinate = spotCoordinate
             }
         }
-        mapView.addAnnotations(annotations)
+        mapView.addAnnotations(annotations.reversed())
     }
     
 
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        guard let annotation = view.annotation else {
+        guard let annotation = view.annotation as? CustomPointAnnotation else {
             return
         }
         annotationDetailsBottomEdge.constant = 0
@@ -108,8 +117,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             self.view.layoutIfNeeded()
         })
         
+        
+        // Display current vehicle details
+        vehicleName.text = "VehicleName: " + cars[annotation.tag].vehicle_make
+        vehicleReminingRange.text = "Remaining Range: " + String(cars[annotation.tag].remaining_mileage)
+        vehicleLicensePlate.text = "License Plate: " + cars[annotation.tag].license_plate_number
+        
         // When user select, move annotation to the center
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             mapView.setCenter(annotation.coordinate, animated: true)
         }
     }
@@ -121,10 +136,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         })
     }
     
-    
-    
-    
-    
+    @IBAction func reservePress(_ sender: Any) {
+        let alert = UIAlertController(title: "Reserve Fail", message: "Sorry, It's demo app.\n Cannot be reserve!", preferredStyle: UIAlertController.Style.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
     
     
     
