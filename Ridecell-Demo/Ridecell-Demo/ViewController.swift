@@ -134,7 +134,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         // When user select, move annotation to the center
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            mapView.setCenter(annotation.coordinate, animated: true)
+            // mapView.setCenter(annotation.coordinate, animated: true)
+            
+            let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            let region:MKCoordinateRegion = MKCoordinateRegion(center: annotation.coordinate, span: span)
+            mapView.setRegion(region, animated: true)
         }
     }
 
@@ -165,7 +169,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     @IBAction func meButtomPress(_ sender: Any) {
         // Zoom to San Francisco by default
-        let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let newLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake((locationManager.location?.coordinate.latitude)!, (locationManager.location?.coordinate.longitude)!)
         let region:MKCoordinateRegion = MKCoordinateRegion(center: newLocation, span: span)
         mapView.setRegion(region, animated: true)
