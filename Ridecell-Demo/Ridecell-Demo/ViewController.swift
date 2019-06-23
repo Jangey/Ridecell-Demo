@@ -17,6 +17,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     class CustomPointAnnotation: MKPointAnnotation {
         var tag: Int!
+        var lat: String!
+        var lng: String!
     }
     
     let locationManager = CLLocationManager()
@@ -42,8 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         getCurrentLocation()
         getSF_Location()
         addSpotOnMap()
-        
-        
+        getAddressfromLatLog(annotations)
     }
     
     func getCurrentLocation() {
@@ -77,14 +78,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     // https://api.opencagedata.com/geocode/v1/json?q=47.61328+-122.342385&key=1598abf0be694459b9e15c4f7ca662bd
     func addSpotOnMap() {
-        let annotationRegion = CustomPointAnnotation()
         
         // adding each spot into mapView
         for (index, car) in cars.enumerated() {
             let lat = car.lat
             let lng = car.lng
             let address = "Address not available"
-            getAddressfromLatLog(lat, lng)
             
             // If lat & lng in JSON, put it into Map
             if(lat.isZero && lng.isZero){
@@ -99,10 +98,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 annotation.title = carPlate
                 annotation.subtitle = address
                 annotation.tag = index
+                annotation.lat = String(lat)
+                annotation.lng = String(lng)
                 annotations.append(annotation)
-                
-                // update last annotation coordinate
-                annotationRegion.coordinate = spotCoordinate
             }
         }
         mapView.addAnnotations(annotations)
@@ -177,26 +175,36 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     
     
-    func getAddressfromLatLog(_:Double, _:Double) {
-        //let urlString = "https://api.opencagedata.com/geocode/v1/json?q=\(lat)+\(lng)&key=1598abf0be694459b9e15c4f7ca662bd"
-        let urlString = "https://api.myjson.com/bins/h53tt"
-        let urlRequest = URL(string: urlString)!
-        let session = URLSession.shared
-        let task = session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
-            // this is where the completion handler code goes
-            if error != nil {
-                print(error!.localizedDescription)
+    func getAddressfromLatLog(_ annotations: [CustomPointAnnotation]) {
+        for annotation in annotations {
+//            guard let lat = annotation.lat else {return}
+//            guard let lng = annotation.lng else {return}
+            if annotation.lat != nil && annotation.lng != nil {
+                let lat = annotation.lat!
+                let lng = annotation.lng!
+                
+                let urlString = "https://api.opencagedata.com/geocode/v1/json?q=\(lat)+\( lng)&key=1598abf0be694459b9e15c4f7ca662bd"
+                // let urlString = "https://api.myjson.com/bins/h53tt"
+                let urlRequest = URL(string: urlString)!
+                let session = URLSession.shared
+                let task = session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+                    // this is where the completion handler code goes
+                    if error != nil {
+                        print(error!.localizedDescription)
+                    }
+                    
+                    guard let data = data else { return }
+                    let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                    let results = dataDictionary["results"] as! [[String: Any]]
+                    let formatted = results[0]["formatted"] as? String ?? "Address not available"
+                    annotation.subtitle = formatted
+                })
+                task.resume()
+            } else {
+                print("nil value exit in Annotation")
+                
             }
-            
-            guard let data = data else { return }
-            let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-            let results = dataDictionary["results"] as! [[String: Any]]
-            let formatted = results[0]["formatted"] as? String ?? "Address not available"
-            print(formatted)
-            
-        })
-        task.resume()
-        
+        }
     }
 
 }
