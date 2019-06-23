@@ -50,6 +50,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rZm-ek-CGa">
+                                        <rect key="frame" x="256" y="30" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="d2X-2c-LeX"/>
+                                            <constraint firstAttribute="height" constant="128" id="ffu-vK-trd"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Range: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg2-aF-WEB">
                                         <rect key="frame" x="20" y="132" width="153" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -69,6 +76,8 @@
                                     <constraint firstItem="r8E-CK-aMh" firstAttribute="leading" secondItem="tOO-LC-cwY" secondAttribute="leading" constant="40" id="Q5O-Gk-OCR"/>
                                     <constraint firstAttribute="trailing" secondItem="r8E-CK-aMh" secondAttribute="trailing" constant="40" id="fh9-oN-QX4"/>
                                     <constraint firstItem="iJZ-h7-pcv" firstAttribute="leading" secondItem="tOO-LC-cwY" secondAttribute="leading" constant="20" id="icV-mg-Ue0"/>
+                                    <constraint firstAttribute="trailing" secondItem="rZm-ek-CGa" secondAttribute="trailing" constant="30" id="ndU-18-JZz"/>
+                                    <constraint firstItem="rZm-ek-CGa" firstAttribute="top" secondItem="tOO-LC-cwY" secondAttribute="top" constant="30" id="q7y-wS-TgQ"/>
                                     <constraint firstItem="iJZ-h7-pcv" firstAttribute="top" secondItem="tOO-LC-cwY" secondAttribute="top" constant="30" id="tdf-bT-ffP"/>
                                 </constraints>
                             </view>
@@ -89,6 +98,7 @@
                     <connections>
                         <outlet property="annotationDetailsBottomEdge" destination="NvK-bH-lHD" id="ECR-tb-Ozh"/>
                         <outlet property="mapView" destination="0MA-Bt-FEF" id="ZRm-xW-Zv5"/>
+                        <outlet property="vehicleImage" destination="rZm-ek-CGa" id="aW4-Ws-zvA"/>
                         <outlet property="vehicleLicensePlate" destination="x8t-Fm-I2S" id="yGB-QV-Kxq"/>
                         <outlet property="vehicleName" destination="iJZ-h7-pcv" id="DIJ-AU-srp"/>
                         <outlet property="vehicleReminingRange" destination="Eg2-aF-WEB" id="bGO-VZ-nkV"/>

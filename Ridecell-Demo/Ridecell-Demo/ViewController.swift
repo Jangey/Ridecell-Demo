@@ -26,6 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var vehicleName: UILabel!
     @IBOutlet weak var vehicleReminingRange: UILabel!
     @IBOutlet weak var vehicleLicensePlate: UILabel!
+    @IBOutlet weak var vehicleImage: UIImageView!
     
 
     
@@ -33,6 +34,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         mapView.delegate = self
+        annotationDetailsBottomEdge.constant = -250
         
         // show user current location
         self.mapView.showsUserLocation = true
@@ -122,6 +124,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         vehicleName.text = "VehicleName: " + cars[annotation.tag].vehicle_make
         vehicleReminingRange.text = "Remaining Range: " + String(cars[annotation.tag].remaining_mileage)
         vehicleLicensePlate.text = "License Plate: " + cars[annotation.tag].license_plate_number
+        
+        
+        
+        let dataImage = try? Data(contentsOf:  URL(string: cars[annotation.tag].vehicle_pic_absolute_url)!)
+        
+        if let imageData = dataImage {
+            vehicleImage.image = UIImage(data: imageData)
+            
+        }
         
         // When user select, move annotation to the center
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {

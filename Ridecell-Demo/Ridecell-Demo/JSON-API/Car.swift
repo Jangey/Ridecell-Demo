@@ -21,7 +21,7 @@ class Car {
     var transmission_mode: String
     var vehicle_make: String
     var vehicle_pic: String
-    var vehicle_pic_absolute_url: URL
+    var vehicle_pic_absolute_url: String
     var vehicle_type: String
     var vehicle_type_id: Int
     
@@ -38,7 +38,7 @@ class Car {
         transmission_mode = json["transmission_mode"] as? String ?? "No transmission mode"
         vehicle_make = json["vehicle_make"] as? String ?? "No vehicle make"
         vehicle_pic = json["vehicle_pic"] as? String ?? "No vehicle pic"
-        vehicle_pic_absolute_url = json["vehicle_pic_absolute_url"] as? URL ?? URL(string: "https://ridecell.com/wp-content/themes/ridecell2017/images/Ridecell_logotype.svg")!
+        vehicle_pic_absolute_url = json["vehicle_pic_absolute_url"] as? String ?? "https://ridecell.com/wp-content/themes/ridecell2017/images/Ridecell_logotype.svg"
         vehicle_type = json["vehicle_type"] as? String ?? "No vehicle type"
         vehicle_type_id = json["vehicle_type_id"] as? Int ?? 0
     }
